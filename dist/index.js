@@ -5099,7 +5099,7 @@ exports.extractGoArchive = extractGoArchive;
 function getInfoFromManifest(versionSpec, stable, auth) {
     return __awaiter(this, void 0, void 0, function* () {
         let info = null;
-        const releases = yield tc.getManifestFromRepo('actions', 'go-versions', auth, 'main');
+        const releases = yield tc.getManifestFromRepo('PingCAP-QE', 'go-versions', auth, 'pingcap');
         core.info(`matching ${versionSpec}...`);
         const rel = yield tc.findFromManifest(versionSpec, stable, releases);
         if (rel && rel.files.length > 0) {
